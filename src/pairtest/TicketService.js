@@ -20,7 +20,6 @@ export default class TicketService {
           const ticketPaymentService = new TicketPaymentService()
           ticketPaymentService.makePayment(accountId, totalPrice);
           const seatReservationService = new SeatReservationService()
-          console.log('totalSeatsToAllocate',totalSeatsToAllocate);
           seatReservationService.reserveSeat(accountId, totalSeatsToAllocate)
       })
     } catch (error) {
